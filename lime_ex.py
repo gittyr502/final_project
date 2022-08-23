@@ -47,7 +47,7 @@ def main():
     if not os.path.exists(dest_dir):
         os.mkdir(dest_dir)
 
-    sample = 'output1.png'
+    sample = cnfg.explain_image
     results_dict = {'path': [], 'score': []}
     model = keras.models.load_model(model_path)
     explainer = lime_image.LimeImageExplainer()

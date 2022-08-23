@@ -29,4 +29,6 @@ my_class_predict=0
 my_class_add_image=1
 my_class_visu=2
 
+explain_image='explain_image.png'
+
 dest_dir='..\\'

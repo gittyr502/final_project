@@ -137,7 +137,7 @@ def main():
         os.mkdir(dest_dir)
 
     # samples = glob.glob(os.path.join(dataset_path, '*.jpeg'))
-    sample='output1.png'
+    sample=cnfg.explain_image
     # print('Found {} samples in {}'.format(len(samples), dataset_path))
     results_dict = {'path': [], 'score': []}
     # model_name = 'resnet'
