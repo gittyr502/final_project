@@ -79,7 +79,6 @@ def save_image( data_arr, path_to_save):
     img = im.fromarray(rgb_array)
     img.save(path_to_save)
 
-
 def save_images(df, data):
     '''
     run on image array and send all image to save_image func
@@ -90,7 +89,6 @@ def save_images(df, data):
     for arr in range(len(data)):
         print(arr)
         save_image(data[arr],df.iloc[arr]["image_path"] + df.iloc[arr]["image_name"])
-
 
 def choose_x_labels_from_cifar100(df, imgs, cifar100_source_new_labels:Dict, old_csv):
     '''
@@ -111,9 +109,6 @@ def choose_x_labels_from_cifar100(df, imgs, cifar100_source_new_labels:Dict, old
     df.drop('index', inplace=True, axis=1)
     return df, images[1:]
 
-
-
-
 def insert_personal_image_to_csv (image_name:str, label:int ):
     '''
     option to add personal image
@@ -127,10 +122,6 @@ def insert_personal_image_to_csv (image_name:str, label:int ):
     im_resize=im.resize((cnfg.image_size,cnfg.image_size))
     im_resize.save(df.iloc[0]["image_path"] + df.iloc[0]["image_name"])
 
-
-
-
-
 def write_df_to_csv(df, newFile=False):
     '''
     write df to csv append or new
@@ -143,7 +134,6 @@ def write_df_to_csv(df, newFile=False):
     else:
         df.to_csv(cnfg.csv_path, mode='a', index=False, header=False)
 
-
 def load_cifar10():
     '''
     work on cifar10: creat csv, save images,  save to zip
@@ -154,7 +144,6 @@ def load_cifar10():
     save_images(df, image_data)
     save_cifar10_dict_labels_to_zip()
     # return df
-
 
 def load_x_labels_from_cifar100(categorys_numbers: List[int]):
     '''
@@ -171,7 +160,6 @@ def load_x_labels_from_cifar100(categorys_numbers: List[int]):
     save_images(cifar100, image_data)
 
     return cifar100
-
 
 def split_train_test_validation():
     '''
@@ -205,7 +193,6 @@ def split_train_test_validation():
     y_test = pd.concat([y_test, personal.iloc[:,-1]])
 
     return x_train, x_validation, x_test, y_train, y_validation, y_test
-
 
 def save_images_as_nparray():
     '''

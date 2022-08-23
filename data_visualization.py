@@ -10,7 +10,6 @@ import create_data as cd
 import config as cnfg
 
 
-
 def show_10_image_of_class(class_label:int) -> None:
     """
     show 10 images of choosen class
@@ -31,7 +30,7 @@ def show_10_image_of_class(class_label:int) -> None:
     plt.tight_layout()
     plt.show()
 
-def show_classes_count():
+def show_classes_count()->None:
     '''
     returns the spread of the data
     :return:None
@@ -50,8 +49,7 @@ def show_classes_count():
     plt.tight_layout()
     plt.show()
 
-
-def show_splited_classes_count():
+def show_splited_classes_count()->None:
     '''
     show data after split train valisation and test
     :return: None

@@ -378,7 +378,6 @@ class AddImageDialog(QDialog,QWidget ):
         self.imageLabel.setPixmap(pixmap)
 
 
-
 class VisualizationDialog(QDialog):
     def __init__(self, my_class=None):
         QDialog.__init__(self)

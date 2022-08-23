@@ -35,7 +35,6 @@ def process_sample(img_path, dest_dir, model, explainer):
     plt.imsave(dest_dir + '/' + base_name + '_lime.png', img_contour)
     return preds[label]
 
-
 def main():
     model_path = cnfg.model_path
     dataset_path = cnfg.csv_path
@@ -59,6 +58,5 @@ def main():
     df.describe()
     # df = df.sort_values(by='score', ascending=False)
     # df.to_csv(dest_dir + '/scores.csv')
-
 
 main()

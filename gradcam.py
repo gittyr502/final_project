@@ -124,7 +124,6 @@ def process_sample(img_path, dest_dir, model):
     cv2.imwrite(dest_dir + '/' + base_name + '.png', output)
     return preds[label]
 
-
 def main():
     model_path = cnfg.model_path
     dataset_path = cnfg.csv_path
