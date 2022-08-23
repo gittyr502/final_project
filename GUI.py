@@ -377,7 +377,6 @@ class AddImageDialog(QDialog,QWidget ):
         pixmap = QtGui.QPixmap(f"output{self.my_class}.png")
         self.imageLabel.setPixmap(pixmap)
 
-
 class VisualizationDialog(QDialog):
     def __init__(self, my_class=None):
         QDialog.__init__(self)
@@ -455,7 +454,6 @@ class VisualizationDialog(QDialog):
 
         self.model_visu_gbox.setLayout(model_visu)
 
-
 class TabDialog(QWidget):
     def __init__(self, my_class=None):
         QDialog.__init__(self, my_class)
@@ -469,8 +467,6 @@ class TabDialog(QWidget):
         self.tabWidget.addTab(self.tabs_list[2], "Visualization")
         self.tabWidget.setStyleSheet("font-size:16px")
         layout.addWidget(self.tabWidget, 0, 0)
-
-
 
 app = QApplication(sys.argv)
 dialog =TabDialog()

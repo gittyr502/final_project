@@ -11,6 +11,7 @@ model = c_model.load_compiled_model()
 y_pred = model.predict(x_test, verbose=0)
 Y_pred_classes = np.argmax(y_pred, axis=1)
 Y_true = np.argmax(y_test, axis=1)
+
 def change_ypred_to_3d(y_pred):
     '''
     choose most 3 high probabilities
@@ -46,7 +47,6 @@ def change_ypred_1d(y_pred):
 
 def heatmap(data, row_labels, col_labels, ax=None, cbar_kw={}, cbarlabel="", **kwargs):
     '''
-
     :param data:
     :param row_labels:
     :param col_labels:
@@ -112,6 +112,7 @@ def show_confusion_matrix():
     fig.tight_layout()
     plt.show()
 # show_confusion_matrix()
+
 def plotmodelhistory():
     '''
     show model history

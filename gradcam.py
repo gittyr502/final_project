@@ -105,7 +105,6 @@ class GradCAM:
         # overlaid image
         return (heatmap, output)
 
-
 def process_sample(img_path, dest_dir, model):
     img =load_img(img_path, target_size=(32, 32))
     base_name = os.path.splitext(os.path.basename(img_path))[0]

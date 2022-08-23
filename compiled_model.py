@@ -78,7 +78,6 @@ def predict_by_image1(image):
     print(res_dict)
     return res_dict
 
-
 #load image with cv2
 def predict_by_image(image):
     '''

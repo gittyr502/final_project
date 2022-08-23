@@ -20,7 +20,6 @@ def unpickle(file)->dict:
         dict = pickle.load(fo, encoding='bytes')
     return dict
 
-
 def create_cifar10_classes_dict()->dict:
     '''
     creat dict of cifar10 classes
@@ -38,8 +37,6 @@ def create_cifar100_classes_dict() -> dict:
     meta_dict100 = unpickle(f"..\\{cnfg.cifar100}\\{cnfg.meta_file_cifar100}")
     classes_dict100 = {np.arange(0,cnfg.num_classes_cifar100)[i]: (str(meta_dict100[b'coarse_label_names'][i]))[2:-1] for i in range(cnfg.num_classes_cifar100)}
     return classes_dict100
-
-
 
 def create_df(dataset_dirname: str, files_list: List[str], labels: str):
     '''
